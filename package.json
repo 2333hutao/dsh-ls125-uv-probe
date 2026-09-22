@@ -1,0 +1,48 @@
+{
+  "name": "dsh-ls125-uv-probe",
+  "version": "1.0.0",
+  "description": "LinShang LS125 UV irradiance meter / UVALED-X3 probe: fully reverse-engineered 9600 8N1 protocol (28-byte frames, CRC-16/MODBUS, poll + clear commands) provided as a DSH skill, together with the capture/decode toolchain and a verified STM32F103 host firmware.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "skill",
+    "README.md",
+    "README.zh.md",
+    "README.i18n.yaml",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": "2333hutao",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "skill",
+    "uart",
+    "reverse-engineering",
+    "logic-analyzer",
+    "nanoDLA",
+    "ls125",
+    "uvaled-x3"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2333hutao/dsh-ls125-uv-probe.git"
+  },
+  "homepage": "https://github.com/2333hutao/dsh-ls125-uv-probe",
+  "peerDependencies": {
+    "@deepseek-ai/dsh-skill": ">=0.1.0-rc.1 <0.1.0 || >=0.1.0-rc.1 <0.2.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
